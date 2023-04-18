@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                     function saltarLinea(){
+                              document.write("<br><br><hr><br><br>");
+
+                              }
+                    function imprimir(frase){
+                              document.write("<big>",frase,"<big>");
+                                  saltarLinea();
+                    }
+                    
+
+                              //pesoDeb = 75
+                              //alturaDeb=1.50
+                              //imcDeb= pesoDeb/(alturaDeb * alturaDeb)
+
+                   // imprimir("El imc de Debany es : "+ Math.round(imcDeb))
+
+                    function calcularIMC (peso, altura){
+                              imc = peso / (altura * altura);
+                              return(imc);
+                    }
+
+                    pesoDeb = 50
+                    alturaDeb=1.50
+                    imcDeb = calcularIMC(pesoDeb, alturaDeb);
+                    imprimir("El IMC de Debany es: " + Math.round(imcDeb));
+                    
+                    if(imcDeb<18.5){
+                        document.write("Tu peso esta por debajo del promedio");
+                    }else if(imcDeb >18.5 && imcDeb<25){
+                        document.write("Estas dentro del normal");
+                    }else(imcDeb>30)
+                        document.write("Tu peso esta por arriba del promedio");
+                    
+                
+
+          </script>
+</body>
+</html>

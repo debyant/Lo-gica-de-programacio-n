@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          
+          <script>
+                    function saltoLinea(){
+                              document.write("<br>");
+                    }
+
+                    function imprimir(frase){
+                              document.write(frase);
+                              saltoLinea();
+                    }
+
+                    var vic = parseInt(prompt("Cuantos partidos ganados"));
+                    var emp = parseInt(prompt("Cuantos partidos empatados"));
+
+                    totalPartidos =((vic*3)+emp)
+                    imprimir("Estos son los puntos: "+ totalPartidos);
+
+                    if(totalPartidos>28){
+                              imprimir("El equipo esta MEJOR que año pasado");
+                    }else if(totalPartidos==28){
+                              imprimir("El equipo esta IGUAL que el año pasado");
+                    }else{imprimir("El equipo esta PEOR que el año pasado");
+                    }
+          </script>
+</body>
+</html>
