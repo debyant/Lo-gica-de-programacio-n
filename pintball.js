@@ -1,6 +1,4 @@
-<canvas width="600" height="400"> </canvas>
 
-<script>
     var pantalla = document.querySelector("canvas");
     var pincel = pantalla.getContext("2d");        
     pincel.fillStyle = "lightgrey";
@@ -20,14 +18,19 @@
     }
 
     var x = 0
+    var sentido = 1;
 
     function actualizarPantalla(){
 
         limpiarPantalla();
+        if(x > 600){
+            sentido = -1;
+        }else if(x < 0){
+            sentido = 1;
+        }
+
         disenharCircunferencia(x,20,10);
-        x++;
+        x = x + sentido;
     }
 
     setInterval(actualizarPantalla,100);
-
-</script> 
