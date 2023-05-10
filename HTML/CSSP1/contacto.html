@@ -24,16 +24,37 @@
             <main>
                     <form>
                               <label for="nombreapellido">Nombre y Apellido</label>
-                              <input type="text" id="nombreapellido">
+                              <input type="text" id="nombreapellido" class="input-padron" required>
                               <label for="correoelectronico">Correo electronico</label>
-                              <input type="text" id="correoelectronico">
+                              <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
                               <label for="telefono">Telefono</label>
-                              <input type="text" id="telefono">
+                              <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXX XXX">
+                              <!--Caja de mensaje-->
+                              <label for="mensaje">Mensaje</label>
+                              <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+                              <!--Radio buttons-->
+                              <fieldset>
+                                        <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                                        <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                                        <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
+                                        <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                              </fielset>
+                              <fieldset>
+                                        <legend>¿En cuál horario prefiere ser atendido</legend>
+                                        <select><option>Mañana</option>
+                                                  <option>Mañana</option>
+                                                  <option>Tarde</option>
+                                                  <option>Noche</option>
+                                                  <option>Mañana</option>
+                                        </select>
+                              </fieldset>
+                              <label><input type="checkbox" checked>Le gustaría recibir novedades de la Barbería Alura</label>
                               <input type="submit" value="Enviar formulario">
+
                     </form>
             </main>
             <footer>
-                <img src="logo-blanco.png">
+                <img src="logo-blanco.png" alt="logo-alura">
                 <p class="copyright">
                     &copy Copyright Barbería Alura - 2023
                 </p>
